@@ -12,7 +12,7 @@ using System.Configuration;
 
 var builder = WebApplication.CreateBuilder(args);
 
-string MySqlConnection = builder.Configuration.GetConnectionString("ProjetoWebMvcContext");
+string MySqlConnection = builder.Configuration.GetConnectionString("DefaultConnection");
 
 builder.Services.AddDbContextPool<ProjetoWebMvcContext>(options =>
                     options.UseMySql(MySqlConnection, ServerVersion.AutoDetect(MySqlConnection)));

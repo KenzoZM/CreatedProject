@@ -22,6 +22,8 @@
     <form asp-action="Delete">
         <input type="hidden" asp-for="Id" />
         <input type="submit" value="Delete" class="btn btn-danger" /> |
-        <a asp-action="Index">Back to List</a>
+        <a asp-action="Index" class="btn btn-secondary">
+            <span title="Back To List" class="fas fa-plus">Back To List</span>
+        </a>
     </form>
 </div>
