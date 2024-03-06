@@ -1,24 +1,23 @@
 ﻿@model ProjetoWebMvc.Models.ViewModels.SellerFormViewModel;
 @{
-    ViewData["Title"] = "Create";
+    ViewData["Title"] = "Create Seller";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<h4>Seller</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
         <form asp-action="Create">
             <div class="form-group">
                 <label asp-for="Seller.Name" class="control-label"></label>
-                <input asp-for="Seller.Name" class="form-control" />
+                <input asp-for="Seller.Name" class="form-control" placeholder="digite seu nome" />
                 <span asp-validation-for="Seller.Name" class="text-danger"></span>
             </div>
             <br/>
             <div class="form-group">
                 <label asp-for="Seller.Email" class="control-label"></label>
-                <input asp-for="Seller.Email" class="form-control" />
+                <input asp-for="Seller.Email" class="form-control"placeholder="digite seu e-mail" />
                 <span asp-validation-for="Seller.Email" class="text-danger"></span>
             </div>
             <br/>
@@ -40,6 +39,9 @@
             <br />
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-secondary">
+                    <span title="Back To List" class="fas fa-plus">Back To List</span>
+                </a>
             </div>
         </form>
     </div>

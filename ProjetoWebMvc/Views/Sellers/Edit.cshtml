@@ -1,11 +1,10 @@
 ﻿@model ProjetoWebMvc.Models.ViewModels.SellerFormViewModel;
 @{
-    ViewData["Title"] = "Edit";
+    ViewData["Title"] = "Edit Seller";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<h4>Edit</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
@@ -41,6 +40,9 @@
             <br />
             <div class="form-group">
                 <input type="submit" value="Save" class="btn btn-success"/>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <span title="Back To List" class="fas fa-plus">Back To List</span>
+                </a>
             </div>
         </form>
     </div>
